@@ -109,7 +109,7 @@
 <script>
         
         <?php
-        $secret = "6Ld4IfkpAAAAAIRQ5qsczV1uJsTvzqUeaJoW1Smb";
+        $secret = "";
         $response = null;
         $reCaptcha = new ReCaptcha($secret);
         
