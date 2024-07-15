@@ -1,9 +1,9 @@
-
-
 <html>
+<head>
 <link rel="stylesheet" type="text/css" href="Loginc.css">
+<link rel="icon" href="/Files/favicon32.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<style> 
   body {
       position: relative; 
   }
@@ -15,35 +15,44 @@
 </style>
 
 <meta charset="UTF-8">
-  <title>Home</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+<title>Dallas Crump</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
-    <?php
-        require_once "recaptchalib.php";
-    ?>
-  
+<?php
+    require_once "recaptchalib.php";
+?>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!--Navigation Bar.-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+ <div class="container-fluid">  
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#section1">Section 1</a>
+      <a class="nav-link" href="#section1">Intro</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#section2">Section 2</a>
+      <a class="nav-link" href="#section2">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#section3">Section 3</a>
+      <a class="nav-link" href="#section3">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://dallascrump.net/projects.php">Projects</a>
     </li>
   </ul>
+  <div class="nav navbar-nav navbar-right">
+    <a href="https://www.github.com/dcrump011" target="_blank"><img src="Files/githubLogoOrange.png" style="height: 32px; width: 32px; margin-right: 8px;"></img></a>
+    <a href="https://www.linkedin.com/in/dallas-crump-16b178127/" target="_blank"><img src="Files/LinkedIn_logo.png" style="height: 32px; width: 32px;"></img></a>
+  </div>
+  </div>
 </nav>
 
 
@@ -57,7 +66,7 @@
     <div id="section2" class="jumbotron" style="Height: 100%;">
         <h2 style = "text-align: center; margin-top: 30px;">Who am I?</h2>
             <h3 style="margin-top: 45px;">Summary/Education</h3>
-            <p>Graduated from the <b>University of Missouri-St. Louis</b> with a <b>Bachelors in Information Systems</b>, December 2017.  Currently living in Bakersfield, CA.
+            <p>Graduated from the <b>University of Missouri-St. Louis</b> with a <b>Bachelors in Information Systems</b>, December 2017.  Currently living in Los Angeles, CA.
             Proven Full-Stack Software Engineer open to new and interesting opportunities.</p>
             
             <h3 style="margin-top: 60px;">Skills</h3>
@@ -83,9 +92,8 @@
     <div class = "inputBox">
         <input type = "text" name = "email" placeholder = "Your email" required> <br><br>
         <textarea name="comment" placeholder = "Message" required></textarea> <br><br>
-        <div class="g-recaptcha" data-sitekey="6LcaJIIaAAAAAI85AA8IRT-FD98GhLYTBtzruC1R" style="margin-bottom: 10px;"></div>
-        <button class = "btn btn-secondary" type = "submit">Submit</button>
-        
+        <div class="g-recaptcha" data-sitekey="6Ld4IfkpAAAAAKRtRuRqpJP71mo-4ck71Z-KKTW_" style="margin-bottom: 10px;"></div>
+        <button disabled="true" class = "btn btn-secondary" type = "submit">Submit</button>
     </div>
     </form>
     
@@ -101,7 +109,7 @@
 <script>
         
         <?php
-        $secret = "6LcaJIIaAAAAABhZgyDpTNz9Bz0BbOK2RGliK5tH";
+        $secret = "6Ld4IfkpAAAAAIRQ5qsczV1uJsTvzqUeaJoW1Smb";
         $response = null;
         $reCaptcha = new ReCaptcha($secret);
         
@@ -120,7 +128,7 @@
         
         if (strlen( $_POST['email'])>3 && strlen( $_POST['comment'])>3)
         {
-            mail('dcrump011@gmail.com', 'My Subject', $message);
+            mail('CHANGEME@gmail.com', 'My Subject', $message);
         }
         ?>
             alert("Email sent.  Thanks for reaching out!");
@@ -133,8 +141,3 @@
 
 </body>
 </html>
-
-
-
-
-
